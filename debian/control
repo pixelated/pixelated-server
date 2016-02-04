@@ -1,0 +1,11 @@
+Source: pixelated-server
+Maintainer: Folker Bernitt <fbernitt@thoughtworks.com>
+Priority: optional
+Build-Depends: dh-systemd, debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: pixelated-server
+Architecture: all
+Depends: ${misc:Depends}, pixelated-user-agent, systemd
+Description: Runs pixelated as a server
+ Install this if you want to have pixelated on a server 

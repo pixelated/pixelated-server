@@ -1,0 +1,10 @@
+# Automatically added by dh_systemd_start
+if [ -d /run/systemd/system ]; then
+	deb-systemd-invoke stop pixelated-server.service >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/pixelated-server" ]; then
+	invoke-rc.d pixelated-server stop || exit $?
+fi
+# End automatically added section
