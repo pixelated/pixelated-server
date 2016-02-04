@@ -7,6 +7,8 @@ Standards-Version: 3.9.6
 
 Package: pixelated-server
 Architecture: all
+Conflicts: pixelated-dispatcher-proxy
+Breaks: pixelated-dispatcher, pixelated-dispatcher-common, pixelated-dispatcher-manager
 Depends: ${misc:Depends}, pixelated-user-agent, systemd
 Description: Runs pixelated as a server
  Install this if you want to have pixelated on a server 
