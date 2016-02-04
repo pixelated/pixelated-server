@@ -5,9 +5,5 @@ After=local-fs.target network-online.target
 
 [Service]
 Type=simple
-Environment=HOME=/var/lib/pixelated
-Environment=LEAP_PROVIDER=localhost
-Environment=SSL_KEY=/etc/ssl/private/ssl-cert-snakeoil.key
-Environment=SSL_CERT=/etc/ssl/certs/ssl-cert-snakeoil.pem
-Environment=LEAP_CA=/etc/ssl/certs/ca-certificates.crt
+EnvironmentFile=-/etc/default/pixelated-server
 ExecStart=/usr/bin/pixelated-user-agent --multi-user -p $LEAP_PROVIDER --leap-provider-cert $LEAP_CA --port 8080 --host 0.0.0.0 --sslkey $SSL_KEY --sslcert $SSL_CERT
