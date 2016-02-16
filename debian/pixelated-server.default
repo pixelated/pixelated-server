@@ -3,4 +3,5 @@ LEAP_PROVIDER=localhost
 SSL_KEY=/etc/ssl/private/ssl-cert-snakeoil.key
 SSL_CERT=/etc/ssl/certs/ssl-cert-snakeoil.pem
 LEAP_CA=/etc/ssl/certs/ca-certificates.crt
+EXTRA_OPTS=
 

@@ -6,4 +6,4 @@ After=local-fs.target network-online.target
 [Service]
 Type=simple
 EnvironmentFile=-/etc/default/pixelated-server
-ExecStart=/usr/bin/pixelated-user-agent --multi-user -p $LEAP_PROVIDER --leap-provider-cert $LEAP_CA --port 8080 --host 0.0.0.0 --sslkey $SSL_KEY --sslcert $SSL_CERT
+ExecStart=/usr/bin/pixelated-user-agent --multi-user -p $LEAP_PROVIDER --leap-provider-cert $LEAP_CA --port 8080 --host 0.0.0.0 --sslkey $SSL_KEY --sslcert $SSL_CERT $EXTRA_OPTS
