@@ -5,5 +5,7 @@ export PATH=/bin:/usr/bin:/sbin:/usr/sbin
 adduser --system pixelated --home /var/lib/pixelated --disabled-password --shell /bin/sh --ingroup nogroup
 mkdir -p /var/lib/pixelated
 chown pixelated:nogroup -R /var/lib/pixelated
+mkdir -p /etc/pixelated
+chown pixelated:nogroup -R /etc/pixelated
 
 
