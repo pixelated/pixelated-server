@@ -13,10 +13,11 @@ fi
 if [ ! -d $WORKDIR ]; then
   mkdir -p $WORKDIR
   chown $USERNAME:nogroup -R $WORKDIR
+fi
 
 if [ ! -d $ETCDIR ]; then
   mkdir -p $ETCDIR
   chown $USERNAME:nogroup -R $ETCDIR
 fi
 
-systemctl restart pixelated-server
+service pixelated-server restart
