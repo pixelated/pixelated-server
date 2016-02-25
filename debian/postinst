@@ -2,10 +2,21 @@
 
 export PATH=/bin:/usr/bin:/sbin:/usr/sbin
 
-adduser --system pixelated --home /var/lib/pixelated --disabled-password --shell /bin/sh --ingroup nogroup
-mkdir -p /var/lib/pixelated
-chown pixelated:nogroup -R /var/lib/pixelated
-mkdir -p /etc/pixelated
-chown pixelated:nogroup -R /etc/pixelated
+USERNAME='pixelated'
+WORKDIR='/var/lib/pixelated'
+ETCDIR='/etc/pixelated'
 
+if ! id -u $USERNAME 2>/dev/null; then
+  adduser --system $USERNAME --home $WORKDIR --disabled-password --shell /bin/sh --ingroup nogroup
+fi
 
+if [ ! -d $WORKDIR ]; then
+  mkdir -p $WORKDIR
+  chown $USERNAME:nogroup -R $WORKDIR
+
+if [ ! -d $ETCDIR ]; then
+  mkdir -p $ETCDIR
+  chown $USERNAME:nogroup -R $ETCDIR
+fi
+
+systemctl restart pixelated-server
