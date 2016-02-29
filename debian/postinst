@@ -6,7 +6,7 @@ USERNAME='pixelated'
 WORKDIR='/var/lib/pixelated'
 ETCDIR='/etc/pixelated'
 
-if ! id -u $USERNAME 2>/dev/null; then
+if ! ( /usr/bin/getent passwd $USERNAME > /dev/null ); then
   adduser --system $USERNAME --home $WORKDIR --disabled-password --shell /bin/sh --ingroup nogroup
 fi
 
