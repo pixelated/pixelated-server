@@ -10,6 +10,10 @@ if ! ( /usr/bin/getent passwd $USERNAME > /dev/null ); then
   adduser --system $USERNAME --home $WORKDIR --disabled-password --shell /bin/sh --ingroup nogroup
 fi
 
+if ! ( /usr/bin/groups $USERNAME | grep ssl-cert > /dev/null ); then
+  adduser $USERNAME ssl-cert
+fi
+
 if [ ! -d $WORKDIR ]; then
   mkdir -p $WORKDIR
 fi
