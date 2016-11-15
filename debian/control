@@ -1,14 +1,15 @@
 Source: pixelated-server
 Section: mail
-Maintainer: Christoph Kluenter <ckluente@thoughtworks.com>
+Maintainer: Pixelated Project Team <team@pixelated-project.org>
 Priority: optional
 Build-Depends: dh-systemd, debhelper (>= 7.4.3)
 Standards-Version: 3.9.6
 
 Package: pixelated-server
 Architecture: all
-Conflicts: pixelated-dispatcher-proxy
-Breaks: pixelated-dispatcher, pixelated-dispatcher-common, pixelated-dispatcher-manager
 Depends: ${misc:Depends}, pixelated-user-agent, systemd
-Description: Runs pixelated as a server
- Install this if you want to have pixelated on a server 
+Description: Run pixelated-user-agent as a service in multi-user mode.
+  Pixelated user-agent combines the usefulness of modern email
+  with the privacy of modern cryptography.
+  Pixelated server is a modern privacy-preserving webmail solution
+  for organizations.
