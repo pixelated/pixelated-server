@@ -7,7 +7,7 @@ Standards-Version: 3.9.6
 
 Package: pixelated-server
 Architecture: all
-Depends: ${misc:Depends}, pixelated-user-agent, systemd
+Depends: ${misc:Depends}, systemd, ssl-cert, pixelated-user-agent
 Description: Run pixelated-user-agent as a service in multi-user mode.
   Pixelated user-agent combines the usefulness of modern email
   with the privacy of modern cryptography.
