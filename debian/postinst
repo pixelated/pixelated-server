@@ -24,4 +24,4 @@ if [ ! -d $ETCDIR ]; then
 fi
 chown $USERNAME:nogroup -R $ETCDIR
 
-service pixelated-server restart
+systemctl restart pixelated-server
